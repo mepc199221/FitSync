@@ -1,17 +1,25 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
-    }
-  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" },
-    { "source": "/api", "destination": "/index.html" },
-    { "source": "/signup", "destination": "/index.html" },
-    { "source": "/Login", "destination": "/index.html" },
-    { "source": "/user", "destination": "/index.html"}
+    {
+      "source": "/api/:path*",
+      "destination": "https://fitsync-av4g.onrender.com/api/:path*"
+    },
+    {
+      "source": "/signup",
+      "destination": "https://fitsync-av4g.onrender.com/signup"
+    },
+    {
+      "source": "/Login",
+      "destination": "https://fitsync-av4g.onrender.com/Login"
+    },
+    {
+      "source": "/user/:path*",
+      "destination": "https://fitsync-av4g.onrender.com/user/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
