@@ -53,7 +53,7 @@ export function MemberWelcome() {
         <h3>Tu Membresía</h3>
         {esSuper ? (
           <div className="renewal-info">
-            <p className="renewal-date">Actualmente eres un Super Miembro</p>
+            <p className="renewal-date">Actualmente eres un Super usuario</p>
           </div>
         ) : esCliente ? (
           // Usuario con id_rol = 2 (cliente): mostrar temporizador y permitir renovación
