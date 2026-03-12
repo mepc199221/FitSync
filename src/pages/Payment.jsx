@@ -246,6 +246,7 @@ export default function Payment() {
       try {
         const response = await fetch('/api/token/verify', {
           headers: {
+            
             'Authorization': `Bearer ${token}`,
           },
         });
